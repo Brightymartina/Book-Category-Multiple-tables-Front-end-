@@ -1,24 +1,13 @@
-{{allBookCategories | json}}
+<!--{{allBookCategories | json}}-->
 
 <div class="container">
-    <div class="container">
-        <table>
-            <tbody>
-                <tr>
-                    <th width="150"> Id</th>
-                    <th width="150">Title</th>
-                    <th width="150">Category</th>
-                    <tr *ngFor="let bookCategory of allBookCategories">
-                        <td>{{bookCategory.bookcatId}}</td>
-                        <td>{{bookCategory.name}}</td>
+    
+   <!--{{books | json}}-->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjM_MzyQpr5ox35fm_o49klFR8qhh3eSFMOWbTk6WBVtdqxZsNQ" class="img-rounded" alt="Cinque Terre" width="1100" height="300">
+    <h1> Book-Category Details</h1>
 
-                        <td><button type="button" class="btn btn-primary " (click)="editBookCategory(bookCategory.bookcatId)">Edit</button>
-                            <button type="button" class="btn btn-primary " (click)="deleteBookCategory(bookCategory.bookcatId)">Delete</button></td>
-                    </tr>
-            </tbody>
-        </table>
-    </div>
-   {{books | json}}
+    <div class="jumbotron" >
+           
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -48,6 +37,7 @@
                                     <small [hidden]="myForm.controls.book.controls[i].controls.bookname.valid" class="text-danger">
 Book Name is required
 </small>
+
                                 </div>
                             </div>
                         </div>
@@ -69,12 +59,34 @@ Add another book +
                     </div>
                     <div class="clearfix"></div>
 
-                   <div class="margin-20">
+                   <!--<div class="margin-20">
                         <div>myForm details:-</div>
                         <pre>Is myForm valid?: <br>{{myForm.valid | json}}</pre>
                         <pre>form value: <br>{{myForm.value | json}}</pre>
-                    </div>
+                    </div>-->
                 </form>
             </div>
         </div>
+    </div>
+    <div>
+        </div>
+        <br>
+         <div class="table-responsive" >      
+     
+        <table class="table">
+            <tbody>
+                <tr class="warning">
+                    <th width="150"> Id</th><th width="150">Title</th><th width="150">Category</th></tr>
+                    <tr  class="success" *ngFor="let bookCategory of allBookCategories">
+                        <td>{{bookCategory.bookcatId}}</td>
+                        <td>{{bookCategory.name}}</td>
+
+                        <td><button type="button" class="btn btn-info pull-left btn-lg" (click)="editBookCategory(bookCategory.bookcatId)">Edit</button>
+                            <button type="button" class="btn btn-warning pull-right btn-lg" (click)="deleteBookCategory(bookCategory.bookcatId)">Delete</button></td>
+                    </tr>
+            </tbody>
+        </table>
+    
+    </div>
+ 
     </div>

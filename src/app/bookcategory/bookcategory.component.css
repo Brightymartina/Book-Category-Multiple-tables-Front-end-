@@ -4,6 +4,9 @@ h1 {
     font-weight: 400; 
  
 }
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjM_MzyQpr5ox35fm_o49klFR8qhh3eSFMOWbTk6WBVtdqxZsNQ");
+}
 
 h3 { 
    color: blue;
@@ -32,4 +35,7 @@ button {
 .success{
     color: green;
     font-size: 20px;
+}
+h1{
+    color:#008CBA;
 }
